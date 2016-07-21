@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Child Simulator</title>
+    <link rel="stylesheet" href="Sass/style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-app="child-simulator" ng-controller="controller">
+
+    <div class="">
+      <button ng-click="words()" type="button" name="button">Words</button>
+      <button ng-click="moreWords()" type="button" name="button">More Words</button>
+      <button ng-click="wordsDec()" type="button" name="button">Words with Decorations</button>
+      <button ng-click="moreWordsDec()" type="button" name="button">More Words with Decorations</button>
+    </div>
+    <br>
+
+
+    <div ng-repeat="wordDisplay in result track by $index" class = "ng-class : {{wordDisplay.style}}" >
+      {{wordDisplay.word}}
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" charset="utf-8"></script>
+    <script src="controller.js" charset="utf-8"></script>
+  </body>
+</html>
