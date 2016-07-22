@@ -38,7 +38,7 @@ app.controller('controller', function($scope) {
         var randIndex = Math.floor(Math.random() * $scope.stuff.phrases.length);
         var randStyle = Math.floor(Math.random() * $scope.stuff.styles.length);
         var newElement = {
-            word: $scope.stuff.words[randIndex],
+            word: $scope.stuff.phrases[randIndex],
             style: $scope.stuff.styles[randStyle]
         };
         $scope.result.push(newElement);
